@@ -269,35 +269,27 @@ class WC_Gateway_Payzone extends WC_Payment_Gateway {
 
     // init api
     $c2pClient = new Connect2PayClient($this->connect2_url, $this->originator_id, $this->password);
-	$amount = ($order->order_total)*100;
-	$description = "";
+	$amount = ($order->order_total) * 100;
+	$description = $amount / 100 . ' '. $currency;
 	$currency = get_woocommerce_currency();
 
-		if ( $currency != 'MAD' && $currency != 504 && $currency != '504' ) {
-			
-		// Rate of exchange
+	if ( $currency != 'MAD' && $currency != 504 && $currency != '504' ) {
 
-			$taux = Connect2PayCurrencyHelper::getRate($currency, 'MAD', htmlspecialchars_decode($this->originator_id), htmlspecialchars_decode($this->password));
-			
-			if(empty($taux) OR is_null($taux)){
-				$message = "Payzone : Problème de change";
-				$this->log($message);
-				echo $message;              
-			}
-			
-			if($this->currency_used == 'devise'){
-			
-			 $description = $amount / 100 . ' '. $currency;
-			 $amount = $amount * $taux;
-			 
-			}else if($this->currency_used == 'both'){
-				
-			    $description = 'le montant de '.$amount / 100 . ' '. $currency.'	a ete converti en Dirham marocain avec un taux de change de '.$taux;
-				$amount = $amount * $taux;
-			}
-	
+	// Rate of exchange
 
+		$taux = Connect2PayCurrencyHelper::getRate($currency, 'MAD', htmlspecialchars_decode($this->originator_id), htmlspecialchars_decode($this->password));
+
+		if(empty($taux) OR is_null($taux)){
+			$message = "Payzone : ProblÃ¨me de change";
+			$this->log($message);
+			echo $message;              
 		}
+
+		if($this->currency_used == 'both'){
+		    $description = 'le montant de '.$amount / 100 . ' '. $currency.' a ete converti en Dirham marocain avec un taux de change de '.$taux;
+		}
+		$amount = $amount * $taux;
+	}
 			
     // customer informations
     $c2pClient->setShopperID($order->get_customer_id());
