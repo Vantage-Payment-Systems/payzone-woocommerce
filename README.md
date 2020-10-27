@@ -1,4 +1,4 @@
-# WooCommerce PayXpert Payment Module
+# WooCommerce Payzone Payment Module
 ### Version for WooCommerce 3.7 to 4.3
 
 The author of this plugin can NEVER be held responsible for this software.
@@ -22,4 +22,4 @@ There is no warranty what so ever. You accept this by using this software.
 
    
 ## Support
-Please visit the PayXpert website (http://www.payxpert.com) for our support contact details.
+Please visit the Payzone website (http://payzone.ma) for our support contact details.
