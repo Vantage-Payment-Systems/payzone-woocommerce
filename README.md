@@ -16,9 +16,9 @@ There is no warranty what so ever. You accept this by using this software.
 
 2. Activate the plugin at the plugin administration page
 
-3. Go the that WooCommerce Settings, click on Checkout, you will see a new Checkout Options: PayXpert
+3. Go the that WooCommerce Settings, click on Checkout, you will see a new Checkout Options: Payzone
 
-4. Click on the PayXpert Checkout Options, enable the gateway and fill the information provided by PayXpert
+4. Click on the PayXpert Checkout Options, enable the gateway and fill the information provided by Payzone
 
    
 ## Support
