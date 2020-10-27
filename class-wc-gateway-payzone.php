@@ -270,9 +270,9 @@ class WC_Gateway_Payzone extends WC_Payment_Gateway {
     // init api
     $c2pClient = new Connect2PayClient($this->connect2_url, $this->originator_id, $this->password);
 	$amount = ($order->order_total) * 100;
-	$description = $amount / 100 . ' '. $currency;
+	
 	$currency = get_woocommerce_currency();
-
+$description = $amount / 100 . ' '. $currency;
 	if ( $currency != 'MAD' && $currency != 504 && $currency != '504' ) {
 
 	// Rate of exchange
