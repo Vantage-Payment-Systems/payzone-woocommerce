@@ -1,4 +1,4 @@
-# WooCommerce PayXpert Payment Module
+# WooCommerce Payzone Payment Module
 ### Version for WooCommerce 3.7 to 4.3
 
 The author of this plugin can NEVER be held responsible for this software.
@@ -16,10 +16,10 @@ There is no warranty what so ever. You accept this by using this software.
 
 2. Activate the plugin at the plugin administration page
 
-3. Go the that WooCommerce Settings, click on Checkout, you will see a new Checkout Options: PayXpert
+3. Go the that WooCommerce Settings, click on Checkout, you will see a new Checkout Options: Payzone
 
-4. Click on the PayXpert Checkout Options, enable the gateway and fill the information provided by PayXpert
+4. Click on the Payzone Checkout Options, enable the gateway and fill the information provided by Payzone
 
    
 ## Support
-Please visit the PayXpert website (http://www.payxpert.com) for our support contact details.
+Please visit the Payzone website (http://payzone.ma) for our support contact details.
